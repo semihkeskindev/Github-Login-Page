@@ -16,7 +16,15 @@
 
 
         <?php
+        $validation = false;
 
+        // gelmesi gereken veriler doğru şekilde gelmişse $validation true döner.
+        // eğer gelmesi gereken veriler gelmemişse $validation false döner.
+        if (!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])) {
+            $validation = true;
+        }
+
+        if ($validation) {
             echo "<h2 style='text-align: center'>Success!</h2>";
 
             if (isset($_POST['remember'])) {
@@ -26,6 +34,10 @@
             else{
                 echo "<h4 style='text-align: center'>We will not remember you</h4>";
             }
+        } else {
+            echo "<h2 style='text-align: center'>Error!</h2>";
+            echo "<h4 style='text-align: center'>Check your email and password.</h4>";
+        }
 
         ?>
 
