@@ -1,3 +1,4 @@
 # Github-Login-Page
 
-Upload this files to your localhost and type localhost/#path-name/index.php
+- Upload this files to your localhost 
+- Type 'localhost/#path-name/index.php' to your browser
